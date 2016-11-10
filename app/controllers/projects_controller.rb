@@ -29,8 +29,12 @@ class ProjectsController < ApplicationController
 
   def update 
     @project = Project.find(params[:id])
-    @project.update(project_params)
-    flash[:notice] = "Project has been updated." 
+    if @project.update(project_params)
+      flash[:notice] = "Project has been updated." 
+    else 
+      flash[:alert] = "Project has not been updated" 
+    end
+        
     redirect_to @project
   end
 
