@@ -18,6 +18,14 @@
 
       </li>
     </ul>
+    <ul id="ticket">
+      <% @project.tickets.each do |ticket| %> 
+        <li>
+          #<%= ticket.id %> - <%= link_to ticket.name, [@project, ticket] %> 
+        </li>
+      <% end %> 
+    </ul>
 </header>
+
 <p><%= @project.description %></p> 
 
