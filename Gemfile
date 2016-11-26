@@ -45,6 +45,7 @@ group :development, :test do
   gem 'capybara' 
   gem 'pry' 
   gem 'byebug'
+  gem 'database_cleaner'
 end
 
 group :development do
