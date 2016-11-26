@@ -1,6 +1,6 @@
 <header>
   <h1>
-    New Ticket <small><%= @project.name %></small>
+    New Ticket <small><%= link_to @project.name, project_path(@project) %></small>
   </h1>
 </header>
 <%= render "form", project: @project, ticket: @ticket %> 

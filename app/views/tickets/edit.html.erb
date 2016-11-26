@@ -1,7 +1,7 @@
 <header>
   <h1>
     Edit Ticket
-    <small><%= @project.name %></small>
+    <small><%= link_to @project.name, project_path(@project) %></small>
   </h1>
 </header>
 <%= render "form", project: @project, ticket: @ticket %> 
