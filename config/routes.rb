@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   namespace :admin do
     root 'application#index'
     # get 'users' => "users#index"
-    resources :users
+    resources :users do 
+      member do 
+        patch :archive 
+      end
+    end
     resources :projects, only: [:new, :create, :destroy ]
   end
 
